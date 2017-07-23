@@ -10,6 +10,11 @@ func MergeSort(arr []int) {
 	MergeSort(arr[:size/2])
 	//递归右半部分
 	MergeSort(arr[size/2:])
+	//合并排序好的左半部分和右半部分
+	merge(size, arr)
+}
+
+func merge(size int, arr []int) {
 	//拷贝数组
 	copyArr := make([]int, size)
 	copy(copyArr, arr)
@@ -21,18 +26,16 @@ func MergeSort(arr []int) {
 	m := size / 2
 	//合并排序好的左半部分和右半部分
 	for k := 0; k < size; k++ {
-		if l < m && r < size {
-			if copyArr[l] > copyArr[r] {
-				arr[k] = copyArr[r]
-				r++
-			} else {
-				arr[k] = copyArr[l]
-				l++
-			}
-		} else if l == m {
+		if l >= m {
 			arr[k] = copyArr[r]
 			r++
-		} else if r == size {
+		} else if r >= size {
+			arr[k] = copyArr[l]
+			l++
+		} else if copyArr[l] > copyArr[r] {
+			arr[k] = copyArr[r]
+			r++
+		} else {
 			arr[k] = copyArr[l]
 			l++
 		}
