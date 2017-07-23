@@ -78,3 +78,4 @@ fabric.properties
 
 Algorithm
 *.txt
+.DS_Store

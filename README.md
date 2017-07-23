@@ -5,5 +5,4 @@
 > 2. [选择排序](https://github.com/lihuaye/Algorithm/blob/master/sort/SelectionSort.go)
 > 3. [插入排序](https://github.com/lihuaye/Algorithm/blob/master/sort/InsertionSort.go)
 > 4. [希尔排序](https://github.com/lihuaye/Algorithm/blob/master/sort/ShellSort.go)
-
->>为什么go比java慢- -
+> 5. [归并排序](https://github.com/lihuaye/Algorithm/blob/master/sort/MergeSort.go)

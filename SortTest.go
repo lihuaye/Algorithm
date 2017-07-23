@@ -2,6 +2,7 @@ package main
 
 import (
 	"Algorithm/sort"
+	"fmt"
 )
 
 func main() {
@@ -14,7 +15,13 @@ func main() {
 	//arr := utils.ReadRandom("hello.txt", 500000)
 	//mysort.TestSort("BubbleSort", arr, mysort.BubbleSort)
 	//mysort.TestSort("SelectionSort", arr, mysort.SelectionSort)
+	arr1 := make([]int, len(arr))
+	copy(arr1, arr)
+	fmt.Println(arr)
 	mysort.TestSort("ShellSort", arr, mysort.ShellSort)
+	//mysort.TestSort("InsertionSort", arr1, mysort.InsertionSort)
+	//mysort.TestSort("SelectionSort", arr1, mysort.SelectionSort)
+	mysort.TestSort("MergeSort", arr, mysort.MergeSort)
 	//fmt.Println("=====")
 	//arr1 := mysort.GenerateBasicOrderArray(n, 100)
 	//mysort.TestSort("InsertionSort", arr1, mysort.InsertionSort)
