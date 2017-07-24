@@ -36,6 +36,8 @@ func partition(arr []int, size int) int {
 			maxIndex++
 		}
 	}
+	//将最后一位小于基点值的值和基点值进行交换构成 arr[0:minIndex] < 基点值 <arr[minIndex+1:]的数组
 	Swap(&arr[l], &arr[minIndex])
+	//返回基点应该在排序完成的数组中的下标
 	return minIndex
 }
