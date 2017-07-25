@@ -10,8 +10,11 @@ func MergeSort(arr []int) {
 	MergeSort(arr[:size/2])
 	//递归右半部分
 	MergeSort(arr[size/2:])
-	//合并排序好的左半部分和右半部分
-	merge(size, arr)
+	//当右半部分的数组起始位大于左半部分的最后一位,则就是有序
+	if arr[size/2] < arr[size/2-1] {
+		//合并排序好的左半部分和右半部分
+		merge(size, arr)
+	}
 }
 
 func merge(size int, arr []int) {
